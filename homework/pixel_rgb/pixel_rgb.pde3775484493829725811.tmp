@@ -1,0 +1,26 @@
+PImage jess; 
+
+void setup(){
+   size(800, 536); 
+   jess = loadImage("Images/jess_width800.jpg"); 
+  
+}
+
+void draw(){
+  image(jess,0,0);  
+  loadPixels();
+  jess.loadPixels(); 
+  for(int x = 0; x < width; x++){
+     for(int y = 0; y < height; y++){
+      int loc = x+y*width; 
+      //pixels[loc] = jess.pixels[loc];//we are saying to go to that jess image and give me the pixel from that
+      //location, take that pixel and put it into the screen at the same location
+      float r = red(jess.pixels[loc]);
+      float g = green(jess.pixels[loc]);
+      float b = blue(jess.pixels[loc]); 
+      pixels[loc] = color(r,g,b); 
+     }
+  }
+  jess.updatePixels(); 
+  
+}
