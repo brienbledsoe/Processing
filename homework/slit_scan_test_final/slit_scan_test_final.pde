@@ -24,7 +24,7 @@ void draw(){
  //image(video,0,0); 
  int w = video.width; //getting the center of the video
  int h = video.height;
- copy(video, 0, 0,w/2, h, x, 0, 1, h);//last rectangle x, 0, 1, h
+ copy(video, w/2, 0, h,1, 0, x, h, 1);//last rectangle x, 0, 1, h
  //copy(video, w/2, 0,1, h, x, 0, 1, h); //x starts at zero but we want to incrament it  
   //the zero in the third coloumn is the top of the picture, the zero index/position
   //the 1 in the fourth slot is because we want the width to be one pixel wide as it copies
