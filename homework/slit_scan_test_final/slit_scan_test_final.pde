@@ -24,19 +24,15 @@ void draw(){
  //image(video,0,0); 
  int w = video.width; //getting the center of the video
  int h = video.height;
- copy(video, w/2, 0,1, h, x, 0, 1, h);//last rectangle x, 0, 1, h
+ copy(video, 0, 0,w/2, h, x, 0, 1, h);//last rectangle x, 0, 1, h
  //copy(video, w/2, 0,1, h, x, 0, 1, h); //x starts at zero but we want to incrament it  
   //the zero in the third coloumn is the top of the picture, the zero index/position
   //the 1 in the fourth slot is because we want the width to be one pixel wide as it copies
   //x = x -1; 
   //x = x + 1; //saying every frame after we copy that column of pixels, increase x by one
   ////x = (x+h) * width;
- //loadPixels();
-   for (int y = 0; y < video.height; y++){
-     //x = x+1; 
-     //h = h+1; 
-   }
-   ////updatePixels();
-  //x = x+1;
-  //h = h+1; 
+ 
+  
+  x = x+1;
+   
 }
