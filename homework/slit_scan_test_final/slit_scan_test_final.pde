@@ -5,8 +5,8 @@ int x=0;
 
 void setup(){
   //size(700,240); //640
-  size(700,240);
-  video = new Capture(this, 320,240); //this is used for the computer to know that this is the screen 
+  size(640,720);//240,700
+  video = new Capture(this, 640,480); //320,240 this is used for the computer to know that this is the screen 
   //it capturing too, then width, and height; 
   video.start(); 
 }
@@ -35,4 +35,8 @@ void draw(){
   
   x = x+1;
    
+}
+
+void mousePressed() {
+  saveFrame("scan-######.png");
 }
