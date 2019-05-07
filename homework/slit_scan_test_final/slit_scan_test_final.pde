@@ -34,6 +34,10 @@ void draw(){
  
   
   x = x+1;
+  
+  if (x> width){
+    x = 0; 
+  }
    
 }
 
